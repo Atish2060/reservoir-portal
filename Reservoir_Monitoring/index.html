@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservoir Monitoring System</title>
+    <link rel="stylesheet" href="head/header.css">
+    <link rel="stylesheet" href="body/main.css">
+    <link rel="stylesheet" href="footer/footer.css">
+</head>
+<body>
+
+    <div id="header"></div>
+    <div id="main"></div>
+    <div id="footer"></div>
+
+    <script>
+        async function loadSection(id, url) {
+            const response = await fetch(url);
+            document.getElementById(id).innerHTML = await response.text();
+        }
+
+        loadSection("header", "head/header.html");
+        loadSection("main", "body/main.html");
+        loadSection("footer", "footer/footer.html");
+    </script>
+
+</body>
+</html>

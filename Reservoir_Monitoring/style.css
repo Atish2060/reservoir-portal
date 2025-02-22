@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #cce5ff, #e6f2ff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    color: #3d79f2;
+}
+
+/* Description Section */
+.description {
+    width: 60%;
+    padding: 20px;
+}
+
+/* Responsive Table */
+.data-table {
+    width: 100%;
+    overflow-x: auto;  /* Enables horizontal scrolling */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #b3d7ff;
+    word-wrap: break-word;
+}
+
+th {
+    background: #a3d0ff;
+    color: #003366;
+}
+
+/* Responsive Chart */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+    width: 90%;
+    margin: auto;
+}
+
+canvas {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+/* Map and Text Layout */
+.intro-map {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Map Container */
+.map-container {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+.map-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 12px;
+    background: rgba(200, 230, 255, 0.9);
+    color: #003366;
+    border-radius: 6px;
+}
+
+/* ✅ Make Table Scrollable on Small Screens */
+@media screen and (max-width: 768px) {
+    .data-table {
+        overflow-x: auto;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* ✅ Move Map Below Text when Window is 75% of the original size (~900px) */
+@media screen and (max-width: 1400px) {
+    .intro-map {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description {
+        width: 100%;
+        text-align: center;
+    }
+
+    .map-container {
+        width: 100%;
+        margin-top: 15px;
+    }
+}

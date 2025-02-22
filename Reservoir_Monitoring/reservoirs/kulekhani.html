@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulekhani Reservoir</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../head/header.css">  <!-- ✅ Header CSS -->
+    <link rel="stylesheet" href="../footer/footer.css">  <!-- ✅ Footer CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  <!-- ✅ Load Chart.js -->
+</head>
+<body>
+
+    <!-- ✅ Load Header -->
+    <div id="header"></div>  
+
+    <div class="container">
+        <h1>Kulekhani Reservoir</h1>
+
+        <!-- ✅ Reservoir Introduction & Map -->
+        <div class="intro-map">
+            <div class="description">
+                <h2>About Kulekhani Reservoir</h2>
+                <p>
+                    Kulekhani Reservoir, also known as Indrasarovar, is Nepal’s only reservoir-based hydropower project. Located in Makwanpur District, it plays a crucial role in electricity generation and water management. The reservoir was constructed in 1982 and has a total storage capacity of 85 million cubic meters. It serves as a reliable water storage facility, ensuring sustainable hydropower generation and irrigation throughout the year.
+                </p>
+                <p>
+                    Unlike run-of-the-river hydropower projects, Kulekhani acts as a storage-type reservoir, meaning it can regulate water flow based on energy demands. This makes it particularly valuable during dry seasons, when river-based hydropower plants struggle to generate sufficient electricity.
+                </p>
+                <p>
+                    Apart from power generation, the reservoir significantly contributes to the local economy, providing irrigation for agriculture, supporting fisheries, and promoting eco-tourism. Surrounded by lush green hills and scenic landscapes, Kulekhani is a popular destination for boating, fishing, and trekking.
+                </p>
+                <p>
+                    With its strategic importance in Nepal’s energy sector and its role in environmental conservation, Kulekhani Reservoir remains a vital asset for renewable energy development and sustainable water resource management in the country.
+                </p>
+            </div>
+            <div class="map-container">
+                <img src="../assets/kulekhani_map.png" alt="Kulekhani Reservoir Map">
+            </div>
+        </div>
+
+        <!-- ✅ Information Table -->
+        <div class="info">
+            <h2>Reservoir Details</h2>
+            <table border="1">
+                <tr><th>Attribute</th><th>Value</th></tr>
+                <tr><td>Location</td><td>Makwanpur, Nepal</td></tr>
+                <tr><td>Date of Construction</td><td>1982</td></tr>
+                <tr><td>Capacity</td><td>85 Million Cubic Meters</td></tr>
+                <tr><td>Purpose</td><td>Hydropower Generation</td></tr>
+            </table>
+        </div>
+
+        <!-- ✅ Graph Section -->
+        <div class="graph">
+            <h2>Water Level Over the Months</h2>
+            <div class="chart-container">
+                <canvas id="waterLevelChart"></canvas>
+            </div>
+        </div>
+
+        <!-- ✅ Water Level Data Table -->
+        <div class="data-table">
+            <h2>Monthly Water Levels</h2>
+            <div class="table-wrapper">
+                <table border="1">
+                    <tr>
+                        <th>Month</th>
+                        <td>Jan</td><td>Feb</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td>
+                        <td>Jul</td><td>Aug</td><td>Sep</td><td>Oct</td><td>Nov</td><td>Dec</td>
+                    </tr>
+                    <tr>
+                        <th>Water Level (m)</th>
+                        <td>75</td><td>78</td><td>80</td><td>82</td><td>85</td><td>88</td>
+                        <td>90</td><td>93</td><td>95</td><td>92</td><td>88</td><td>80</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ✅ Load Footer -->
+    <div id="footer"></div>
+
+    <!-- ✅ Load External JS Files -->
+    <script src="../head/header.js"></script>  <!-- ✅ Load Header -->
+    <script src="../footer/footer.js"></script>  <!-- ✅ Load Footer -->
+    <script src="../reservoirs/kulekhani.js"></script>
+
+</body>
+</html>

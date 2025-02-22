@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ministry of Water and Irrigation</title>
+    <link rel="stylesheet" href="../head/header.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <style>
+        /* About Page Specific Styles */
+        body {
+            background: #f5f5f5 url('../assets/nepal-pattern.png') repeat;
+            font-family: 'Noto Sans', Arial, sans-serif;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #dcdcdc;
+        }
+
+        .ministry-section {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid #004a8f;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ministry-section::before {
+            content: url('../assets/emblem.png');
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            opacity: 0.1;
+            transform: scale(1.2);
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .leader-card {
+            background: #ffffff;
+            border-radius: 4px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #dcdcdc;
+            position: relative;
+        }
+
+        .leader-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+
+        .leader-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 3px solid #004a8f;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .leader-card h3 {
+            color: #004a8f;
+            font-size: 1.3rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .leader-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #444;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-left: 4px solid #004a8f;
+            position: relative;
+        }
+
+        .section-title {
+            color: #004a8f;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #dc143c;
+        }
+
+        /* Mission Section Styles */
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .mission-card {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-icon {
+            margin-bottom: 1rem;
+        }
+
+        .mission-icon img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .mission-card h3 {
+            color: #004a8f;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-card p {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-card ul {
+            list-style: none;
+            padding-left: 0;
+            text-align: left;
+        }
+
+        .mission-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        .mission-card li::before {
+            content: '•';
+            color: #dc143c;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                padding: 15px;
+                margin: 1rem auto;
+            }
+
+            .leader-img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    
+    <div class="about-container">
+        <!-- Ministry Overview -->
+        <section class="ministry-section">
+            <h1 class="section-title">Ministry of Water and Irrigation, Nepal</h1>
+            <p>The Ministry of Water and Irrigation is responsible for the management, development, and conservation of water resources in Nepal. We oversee hydropower projects, irrigation systems, and water supply management across the nation.</p>
+            
+            <div class="leadership-grid">
+                <!-- Minister -->
+                <div class="leader-card">
+                    <img src="../assets/water-minister.jpg" alt="Minister" class="leader-img">
+                    <h3>Hon. Rajendra Prasad Shrestha</h3>
+                    <p>Minister of Water and Irrigation</p>
+                    <p class="quote">"Sustainable water management is key to Nepal's development and prosperity."</p>
+                </div>
+
+                <!-- Department Head -->
+                <div class="leader-card">
+                    <img src="../assets/department-head.jpg" alt="Department Head" class="leader-img">
+                    <h3>Dr. Anjali Gurung</h3>
+                    <p>Director General, Department of Water Resources</p>
+                    <p class="quote">"We are committed to equitable water distribution and innovative resource management."</p>
+                </div>
+
+                <!-- Spokesperson -->
+                <div class="leader-card">
+                    <img src="../assets/spokesperson.jpg" alt="Spokesperson" class="leader-img">
+                    <h3>Mr. Sandeep Bhattarai</h3>
+                    <p>Official Spokesperson</p>
+                    <p class="quote">"Transparency and public engagement are at the core of our operations."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ministry Mission -->
+        <section class="ministry-section">
+            <h2 class="section-title">Our Mission</h2>
+            <div class="mission-grid">
+                <!-- Mission Card 1 -->
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="../assets/water-drop.png" alt="Water Drop Icon">
+                    </div>
+                    <h3>Water Resource Management</h3>
+                    <p>Ensure sustainable and equitable management of Nepal's water resources for present and future generations.</p>
+                    <ul>
+                        <li>Develop integrated water resource management plans</li>
+                        <li>Promote rainwater harvesting and groundwater recharge</li>
+                        <li>Protect watersheds and river ecosystems</li>
+                    </ul>
+                </div>
+
+                <!-- Mission Card 2 -->
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="../assets/hydropower-icon.png" alt="Hydropower Icon">
+                    </div>
+                    <h3>Hydropower Development</h3>
+                    <p>Harness Nepal's hydropower potential to drive economic growth and energy independence.</p>
+                    <ul>
+                        <li>Develop large, medium, and small-scale hydropower projects</li>
+                        <li>Promote public-private partnerships in energy development</li>
+                        <li>Ensure environmental sustainability in hydropower projects</li>
+                    </ul>
+                </div>
+
+                <!-- Mission Card 3 -->
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="../assets/irrigation-icon.png" alt="Irrigation Icon">
+                    </div>
+                    <h3>Irrigation Infrastructure</h3>
+                    <p>Enhance agricultural productivity through modern and efficient irrigation systems.</p>
+                    <ul>
+                        <li>Expand irrigation coverage to remote areas</li>
+                        <li>Modernize existing irrigation infrastructure</li>
+                        <li>Promote water-efficient farming practices</li>
+                    </ul>
+                </div>
+
+                <!-- Mission Card 4 -->
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="../assets/flood-control-icon.jpg" alt="Flood Control Icon">
+                    </div>
+                    <h3>Flood Control & Disaster Management</h3>
+                    <p>Mitigate flood risks and protect communities from water-related disasters.</p>
+                    <ul>
+                        <li>Develop flood forecasting and early warning systems</li>
+                        <li>Construct flood control infrastructure</li>
+                        <li>Promote community-based disaster preparedness</li>
+                    </ul>
+                </div>
+
+                <!-- Mission Card 5 -->
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="../assets/ecosystem.png" alt="Ecosystem Icon">
+                    </div>
+                    <h3>Ecosystem Protection</h3>
+                    <p>Preserve and restore water-related ecosystems for biodiversity and sustainability.</p>
+                    <ul>
+                        <li>Protect wetlands, rivers, and lakes</li>
+                        <li>Promote afforestation in watershed areas</li>
+                        <li>Combat water pollution and promote clean water initiatives</li>
+                    </ul>
+                </div>
+
+                <!-- Mission Card 6 -->
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="../assets/public-awareness.png" alt="Public Awareness Icon">
+                    </div>
+                    <h3>Public Awareness & Education</h3>
+                    <p>Empower citizens through education and awareness about water conservation.</p>
+                    <ul>
+                        <li>Conduct nationwide water conservation campaigns</li>
+                        <li>Develop educational programs for schools and communities</li>
+                        <li>Promote water-saving technologies and practices</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../head/header.js"></script>
+    <script src="../footer/footer.js"></script>
+</body>
+</html>

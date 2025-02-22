@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mai Hydropower</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../head/header.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <div class="container">
+        <h1>Mai Hydropower Project</h1>
+
+        <!-- Introduction & Map -->
+        <div class="intro-map">
+            <div class="description">
+                <h2>About Mai Hydropower</h2>
+                <p>
+                    The Mai Hydropower Project is located in Ilam District, Nepal. It is a run-of-river type project developed to harness the potential of the Mai River for electricity generation.
+                </p>
+                <p>
+                    The plant has an installed capacity of 22 MW and plays a crucial role in supplying power to the eastern region of Nepal. The project contributes to the national grid and supports Nepal’s push for sustainable energy production.
+                </p>
+                <p>
+                    The project includes a diversion weir, headrace tunnel, and underground powerhouse with Francis turbines. Its efficient design ensures year-round power generation, benefiting local communities and industries.
+                </p>
+            </div>
+            <div class="map-container">
+                <img src="../assets/mai.jpg" alt="Mai Hydropower Project">
+            </div>
+        </div>
+
+        <!-- Project Details Table -->
+        <div class="info">
+            <h2>Project Details</h2>
+            <table border="1">
+                <tr><th>Attribute</th><th>Value</th></tr>
+                <tr><td>Location</td><td>Ilam, Nepal</td></tr>
+                <tr><td>Commissioning Year</td><td>2015</td></tr>
+                <tr><td>Installed Capacity</td><td>22 MW</td></tr>
+                <tr><td>Annual Generation</td><td>Approx. 140 GWh</td></tr>
+                <tr><td>Type</td><td>Run-of-River</td></tr>
+            </table>
+        </div>
+
+        <!-- Graph Section -->
+        <div class="graph">
+            <h2>Monthly Water Flow</h2>
+            <div class="chart-container">
+                <canvas id="waterFlowChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Water Flow Data Table -->
+        <div class="data-table">
+            <h2>Monthly Water Flow Data</h2>
+            <div class="table-wrapper">
+                <table border="1">
+                    <tr>
+                        <th>Month</th>
+                        <td>Jan</td><td>Feb</td><td>Mar</td><td>Apr</td><td>May</td><td>Jun</td>
+                        <td>Jul</td><td>Aug</td><td>Sep</td><td>Oct</td><td>Nov</td><td>Dec</td>
+                    </tr>
+                    <tr>
+                        <th>Water Flow (m³/s)</th>
+                        <td>30</td><td>35</td><td>40</td><td>50</td><td>65</td><td>90</td>
+                        <td>120</td><td>130</td><td>110</td><td>80</td><td>55</td><td>40</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- External JS Files -->
+    <script src="../head/header.js"></script>
+    <script src="../footer/footer.js"></script>
+    <script src="../reservoirs/mai.js"></script>
+
+</body>
+</html>

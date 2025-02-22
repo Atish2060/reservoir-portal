@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ministry of Water and Irrigation</title>
+    <link rel="stylesheet" href="../head/header.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <style>
+        /* Add this to ensure header styles aren't affected */
+        #header h1::after {
+            display: none !important;
+        }
+    
+        .contact-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #dcdcdc;
+        }
+    
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+    
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid #004a8f;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .contact-form::before {
+            content: url('../assets/emblem-small.png');
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            opacity: 0.1;
+            transform: scale(0.8);
+        }
+    
+        .contact-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid #dcdcdc;
+        }
+    
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+    
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #004a8f;
+            font-weight: 600;
+        }
+    
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+            font-family: inherit;
+        }
+    
+        input:focus, textarea:focus {
+            outline: 2px solid #004a8f;
+            border-color: transparent;
+        }
+    
+        button {
+            background: #004a8f;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    
+        button:hover {
+            background: #003366;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+    
+        .map-container {
+            margin-top: 2rem;
+            height: 300px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #dcdcdc;
+        }
+    
+        /* Scoped h1 styling for contact page only */
+        .contact-container h1 {
+            color: #004a8f;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+    
+        .contact-container h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #dc143c;
+        }
+    
+        .contact-info h2 {
+            color: #004a8f;
+            margin-bottom: 1.5rem;
+        }
+    
+        .contact-info p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+    
+        .contact-info strong {
+            color: #333;
+        }
+    
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                padding: 15px;
+            }
+            
+            .contact-container h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    
+    <div class="contact-container">
+        <h1>Contact Ministry of Water and Irrigation</h1>
+        
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form>
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <input type="text" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Subject:</label>
+                        <input type="text" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message:</label>
+                        <textarea rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Address:</strong><br>
+                Ministry of Water and Irrigation<br>
+                Singh Durbar, Kathmandu<br>
+                Nepal</p>
+
+                <p><strong>Phone:</strong><br>
+                +977-1-4211001 (Reception)<br>
+                +977-1-4211002 (Information Desk)</p>
+
+                <p><strong>Email:</strong><br>
+                info@waterministry.gov.np</p>
+
+                <h3>Office Hours</h3>
+                <p>Sunday-Friday: 10 AM - 5 PM<br>
+                (Closed on public holidays)</p>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.254850933068!2d85.31653231506206!3d27.690366582802986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a64b5f13e1%3A0x28b2d0eacda45b7b!2sSingh%20Durbar!5e0!3m2!1sen!2snp!4v1624452345678!5m2!1sen!2snp" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../head/header.js"></script>
+    <script src="../footer/footer.js"></script>
+    
+</body>
+</html>
